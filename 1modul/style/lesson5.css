@@ -1,0 +1,77 @@
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    grid-template-areas: 
+    "item1 item1 item1 item1 item1 item2"
+    "item3 item3 item3 item4 item4 item4"
+    "item5 item6 item7 item8 item9 item10"
+    "item11 item11 item11 item12 item12 item12";
+}
+.item1{
+    background-color: aqua;
+    grid-area: item1;
+    /*
+    grid-row: 1/4;
+    grid-column: 1;
+    */
+}
+.item2{
+    background-color: red;
+    grid-area: item2;
+    /*
+    grid-row: 1;
+    grid-column: 2/6;
+    */
+}
+.item3{
+    background-color: blue;
+    grid-area: item3;
+}
+.item4{
+    background-color: green;
+    grid-area: item4;
+    /*
+    grid-row: 2;
+    grid-column: 2/5;
+    */
+}
+.item5{
+    background-color: yellow;
+    grid-area: item5;
+    display: none; /*если бы не было указано положение, то эл-т полностью бы "удалился бы" со страницы и блоки, которым не задано положение - сдивнулись бы.*/
+}
+.item6{
+    background-color: fuchsia;
+    grid-area: item6;
+
+}
+.item7{
+    background-color: greenyellow;
+    grid-area: item7;
+    visibility: hidden; /*Эл-т не удаляется, но просто скрывается весь контент*/
+}
+.item8{
+    background-color: blueviolet;
+    grid-area: item8;
+}
+.item9{
+    background-color: navy;
+    grid-area: item9;
+    /*
+    grid-row: 3;
+    grid-column: 4/7;
+    */
+}
+.item10{
+    background-color: khaki;
+    grid-area: item10;
+}
+.item11{
+    background-color: brown;
+    grid-area: item11;
+}
+.item12{
+    background-color: darkgoldenrod;
+    grid-area: item12;
+}

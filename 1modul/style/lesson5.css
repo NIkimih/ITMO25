@@ -8,6 +8,11 @@
     "item5 item6 item7 item8 item9 item10"
     "item11 item11 item11 item12 item12 item12";
 }
+
+#grid-container div:nth-child(even){
+    color: white;
+}
+
 .item1{
     background-color: aqua;
     grid-area: item1;
@@ -39,7 +44,7 @@
 .item5{
     background-color: yellow;
     grid-area: item5;
-    display: none; /*если бы не было указано положение, то эл-т полностью бы "удалился бы" со страницы и блоки, которым не задано положение - сдивнулись бы.*/
+    /*display: none; /*если бы не было указано положение, то эл-т полностью бы "удалился бы" со страницы и блоки, которым не задано положение - сдивнулись бы.*/
 }
 .item6{
     background-color: fuchsia;
@@ -49,7 +54,7 @@
 .item7{
     background-color: greenyellow;
     grid-area: item7;
-    visibility: hidden; /*Эл-т не удаляется, но просто скрывается весь контент*/
+    /*visibility: hidden; /*Эл-т не удаляется, но просто скрывается весь контент*/
 }
 .item8{
     background-color: blueviolet;

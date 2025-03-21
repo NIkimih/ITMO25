@@ -69,3 +69,32 @@ body{
 p{
     width: 65vw;
 }
+
+.card1test{
+}
+
+.card2test{
+}
+
+.fixed_button{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+}
+
+.h2_test::first-letter{
+   font-size: 8rem;
+   background-color: red;
+   color: wheat;
+}
+
+.text_in_p{
+    position: relative;
+    user-select: none;
+}
+
+.text_in_p::before{
+    content: "1";
+    position: absolute;
+    left: -50px;
+}

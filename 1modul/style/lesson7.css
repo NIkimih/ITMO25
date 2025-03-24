@@ -1,0 +1,38 @@
+body{
+
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 3;
+}
+
+#header{
+    grid-column: 3/9;
+    grid-row: 1;
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#body{
+    grid-column: 4/7;
+    grid-row: 2;
+}
+
+.main_post img{
+    max-width: 20%;
+}
+
+#footer{
+    grid-column: 4/7;
+    grid-row: 3;
+
+}

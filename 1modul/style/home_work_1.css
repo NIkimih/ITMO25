@@ -22,7 +22,7 @@ body{
 #menu button:hover{
     background-color: rgba(0, 0, 0, 0);
     border-color: blue;
-    font-size: 110%;
+    transform: scale(1.2, 1.2);
     font-weight: bold;
 
 }
@@ -85,6 +85,7 @@ body{
     border-bottom: 3px solid transparent;
     border-radius: 1vh;
     margin: 0 2vw;
+    transform: scale(1.1, 1.1);
 }
 
 #main .photo{
@@ -149,6 +150,7 @@ body{
 
 #posts_main div.posts > div:hover{
     background-color: rgba(211, 211, 211, 0.2);
+    transform: scale(1.01, 1.01);
 }
 
 #posts_main .post_1{
@@ -219,6 +221,7 @@ body{
 }
 #works .works_item:hover{
     background-color: rgba(211, 211, 211, 0.2);
+    transform: scale(1.01, 1.01);
 }
 
 #works .works_item .desc{
@@ -291,12 +294,13 @@ div.icon{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    /*width: 100%;*/
     min-height: 60px;
+    gap: 20px;
 }
 
 #footer img{
-    margin: 0 1%;
+    margin: 0 2%;
     width: 40px;
     height: 40px;
     min-height: 20px;
@@ -304,8 +308,7 @@ div.icon{
 }
 
 #footer img:hover{
-    width: 50px;
-    height: 50px;
+    transform: scale(1.1, 1.1);
 }
 
 #footer p{

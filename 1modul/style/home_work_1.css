@@ -1,25 +1,16 @@
 body{
     font-family: 'arial';
 }
-#menu{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: end;
-    align-items: center;
-    gap: 1rem;
-    padding-right: 1rem;
-    min-height: 7vh;
-    box-sizing: border-box;
-}
 
-#menu button{
+
+.col button.head_but{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     border-bottom: 3px solid transparent;
     width: 100px;
 }
 
-#menu button:hover{
+.col button.head_but:hover{
     background-color: rgba(0, 0, 0, 0);
     border-color: blue;
     transform: scale(1.2, 1.2);
@@ -27,41 +18,24 @@ body{
 
 }
 
-#menu button:active{
+.col button.head_but:active{
     background-color: rgba(0, 0, 0, 0);
     border-color: red;
 }
 
-#main{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    margin-bottom: 3vw;
-}
-
-#main .desc{
-    grid-column: 2/7;
-    padding: 1vh 1vw;
-}
-
-#main .desc h1{
-    margin: 2vh 2vw;
-}
-
-#main .desc p{
-    margin: 2vh 2vw;
+p.descr{
     line-height: 3vh;
     font-weight: 600;
     text-align: justify;
 }
 
-#main .desc div.button{
+div.button_resume{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#main .desc button.resume{
-    position: relative;
+button.resume{
     background-color: rgb(255, 100, 101);
     border: none;
     border-bottom: 3px solid transparent;
@@ -71,7 +45,7 @@ body{
     margin: 0 2vw;
 }
 
-#main .desc button.resume p{
+button.resume p{
     text-align: center;
     margin: auto;
     text-transform: uppercase;
@@ -79,7 +53,7 @@ body{
     color: white;
 }
 
-#main .desc button.resume:hover{
+button.resume:hover{
     background-color: red;
     border: none;
     border-bottom: 3px solid transparent;
@@ -88,52 +62,33 @@ body{
     transform: scale(1.1, 1.1);
 }
 
-#main .photo{
-    grid-column: 7/10;
+.main_photo{
     display: flex;
-    align-items: center;
     justify-content: center;
-
+    align-items: center;
 }
-
-#main .photo img{
-    position: relative;
-    width: 80%;
+img.photo{
+    width: 100%;
     border-radius: 50%;
     max-width: 300px;
-    min-width: 200px;
 }
 
-#posts_main{
+.bg-color{
     background-color: rgb(237,247,250);
-    min-width: 400px;
-    gap: 20px;
-    padding-bottom: 2%;
 }
 
-#posts_main .posts_header{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    width: 100%;
-    padding: 2vw 0 0 0;
-}
 
-#posts_main .posts_header p{
-    grid-column: 2;
-}
-
-#posts_main .posts_header button{
+.posts_header button{
     grid-column: 9;
     border: none;
     background-color: rgba(237,247,250, 0);
     color: rgb(0,168,204);
     border-bottom: 1px solid transparent;
     height: 30px;
-    width: 100%;
     text-align: right;
 }
 
-#posts_main .posts_header button:hover{
+.posts_header button:hover{
     border-color: rgb(0,168,204);
     background-color: rgba(237,247,250, 0);
     color: rgb(0,168,204);
@@ -141,27 +96,14 @@ body{
 
 
 
-#posts_main div.posts{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-areas: ". post_1 post_1 post_1 post_1 post_2 post_2 post_2 post_2 .";
-    gap: 20px;
-}
 
-#posts_main div.posts > div:hover{
+
+div.post:hover{
     background-color: rgba(211, 211, 211, 0.2);
     transform: scale(1.01, 1.01);
 }
 
-#posts_main .post_1{
-    grid-area: post_1;
-}
-
-#posts_main .post_2{
-    grid-area: post_2;
-}
-
-#posts_main div.posts > div{
+.post{
     background-color: white;
     border-radius: 20px;
     min-height: 300px;
@@ -170,12 +112,12 @@ body{
     height: 400px;
 }
 
-#posts_main div.posts > div h1{
+div.post > h1{
     font-weight: bold;
     font-size: 26px;
 }
 
-#posts_main div.posts > div p.date{
+div.post > p.date{
     display: inline-block;
     border: 1px;
     border-right-style: solid;
@@ -184,29 +126,19 @@ body{
 
 }
 
-#posts_main div.posts > div p.discr{
+div.post > p.discr{
     display: inline-block;
     width: 45%;
 }
 
-#posts_main div.posts > div p.text{
-    font-size: 16px;
+div.post > p.text{
+    font-size: 100%;
     text-align: justify;
     line-height: 1.5rem;
 
 }
 
-#works{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-}
-#works h2{
-    grid-column: 2/10;
-    font-weight: 400;
-    font-size: 22px;
-}
-#works .works_item{
-    grid-column: 2/10;
+.works_item{
     border: 2px;
     border-bottom-style: solid;
     border-color: rgb(224,224,224);
@@ -219,34 +151,33 @@ body{
     padding: 0 0 1% 0;
     box-sizing: border-box;
 }
-#works .works_item:hover{
+.works_item:hover{
     background-color: rgba(211, 211, 211, 0.2);
     transform: scale(1.01, 1.01);
 }
 
-#works .works_item .desc{
-    display: flex;
-    flex-direction: column;
-}
 
-#works .works_item .desc h1{
+
+.works_item .desc h1{
     margin: 0 0 0 2% ;
     padding: 0 0 0 0;
     font-size: 30px;
     font-weight: 900;
 }
 
-#works .works_item .desc p{
+.works_item .desc p{
     margin: 0 0 0 2%;
     padding: 0 0 0 0;
 }
-#works .works_item .desc > div{
+
+.desc > div{
     display: flex;
     flex-direction: row;
     text-align: center;
     margin: 3% 0;
 }
-#works .works_item .desc p.date{
+
+p.date_works{
     background-color: rgb(20,40,80);
     width: 62px;
     height: 26px;
@@ -271,7 +202,7 @@ body{
     margin: 0 0 0 5%;
 }
 
-#works .works_item .desc p.text{
+.works_item .desc p.text{
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5rem;
@@ -315,6 +246,82 @@ div.icon{
     font-size: 10px;
     color: rgba(0, 0, 0, 0.4);
 }
+
 a{
     text-decoration: none;
 }
+
+.one{
+    order: 2;
+}
+
+.two{
+    order: 1;
+}
+@media (min-width: 580px) {
+    .one {
+      order: 1;
+    }
+    .two {
+      order: 2;
+    }
+  }
+
+.dropdown_content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(13, 202, 204, 1);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px;
+    animation-name: active_form;
+}
+
+.dropdown_content > .container{
+    width: 100%;
+    height: 100%;
+}
+
+.drop_row{
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown:active .dropdown_content, .dropdown_content:hover {
+    display: block;
+    animation-name: active_form;
+    animation-duration: 1s;
+}
+
+@keyframes active_form{
+    from {
+        width: 0px;
+        height: 0px;
+        background-color: rgba(13, 202, 204, 0.01);
+        left: 15%;
+    }
+    to {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(13, 202, 204, 1);
+        top: 0;
+        left: 0;
+    }
+}
+
+.close_drop:active .dropdown_content{
+    display: none;
+}
+
+.form-label > p{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+div > .form_input{
+    border-radius: 100px;
+}
+

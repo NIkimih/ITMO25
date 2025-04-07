@@ -1,0 +1,10 @@
+$main_color: red;
+div{
+    display: flex;
+    li{
+        background-color: $main_color;
+    }
+    &.some_child{
+        font-size: 24px;
+    }
+}

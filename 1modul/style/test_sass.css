@@ -1,0 +1,11 @@
+div {
+  display: flex;
+}
+div li {
+  background-color: red;
+}
+div.some_child {
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=test_sass.css.map */

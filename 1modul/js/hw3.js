@@ -49,4 +49,4 @@ function change_img(){
     let img_src = document.getElementById('carImg');
     img_src.src = mas_img[num_img];
 }
-setInterval(change_img, 2000);
+setInterval(change_img, 1500);

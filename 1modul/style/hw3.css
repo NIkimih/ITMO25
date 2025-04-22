@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel{
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.but-left{
+background-color: red;
+height: 50vh;
+width: 5vw;
+margin-right: 5px;
+}
+.but-right{
+background-color: blue;
+height: 50vh;
+width: 5vw;
+margin-left: 5px;
+}
+.but-right:hover, .but-left:hover{
+    transform: scale(1.01);
+}
+.carousel > img{
+    width: 50%;
+    height: 50%;
+}

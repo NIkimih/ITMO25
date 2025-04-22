@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+        .box_container{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            gap: 30px;
+        }
+        .button_container{
+            display: flex;
+            gap: 20px;
+        }
+        .color_button{
+            border: 1px solid black;
+            height: 20px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .div_button{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="button_container">
+        <div class="color_button" style="background-color: red;">red</div>
+        <div class="color_button" style="background-color: green;">green</div>
+        <div class="color_button" style="background-color: blue;">blue</div>
+    </div>
+    <div class="box_container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="div_button">
+        <button id="button">Click me!</button>
+    </div>
+    <script>
+        let selectColor
+        function getColor(){
+            selectColor = this.style.backgroundColor
+            console.log(selectColor)
+        }
+        const buttons = document.querySelectorAll(".color_button")
+
+        buttons.forEach((button)=>{
+            button.addEventListener("click", getColor)
+        })
+
+        function setColor(){
+            this.style.backgroundColor = selectColor;
+            console.log(selectColor);
+        }
+        const boxes = document.querySelectorAll(".box")
+
+        boxes.forEach((box)=>{
+            box.addEventListener("click", setColor)
+        })
+
+        //скрипты для кнопки
+        function firstHandler(event){
+            const newDiv = document.createElement('div')
+            newDiv.id = "newDiv"
+            newDiv.style.opacity= "0"
+            event.target.parentNode.append(newDiv)
+            newDiv.innerText = "newDiv text"
+            newDiv.style.transition="opacity 4s"
+            newDiv.style.opacity= "1"
+            /*
+            event.stopPropagation();
+            event.preventDefault();
+            console.log("firstHandler", event)
+            */
+        }
+        /*
+        function firstHandler_2(event){
+            event.stopPropagation();
+            console.log("firstHandler_2", event)
+        }
+        function firstHandler_3(){
+            console.log("firstHandler_3")
+        }
+*/
+        const button = document.querySelector("button");
+        button.addEventListener("click",firstHandler);
+        /*
+        button.addEventListener("click",firstHandler_2);
+        button.addEventListener("click",firstHandler_3);
+        button.addEventListener("mousedown",() => {console.log("down")});
+        button.addEventListener("mouseup",() => {console.log("up")});
+        
+       const div = document.querySelector(".div_button")
+       div.addEventListener("click", firstHandler_2)
+*/
+    </script>
+</body>
+</html>

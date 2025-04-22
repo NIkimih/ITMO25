@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .product-cards{
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+        }
+        .product-cards__head{
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .product-cards__price{
+            font-size: 3rem;
+            color: brown;
+        }
+    </style>
 </head>
 <body>
-    
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore magnam 
+        quam explicabo, odio, neque recusandae architecto modi, harum impedit aut hic dolor
+        sunt nulla aspernatur iusto rem tempore excepturi.
+    </div>
+    <div></div>
+    <div class="product-cards">
+        <div class="product-cards__head">Prod1</div>
+        <div class="product-cards__desc">disc1</div>
+        <div class="product-cards__price">Price: 200</div>
+    </div>
+    <div class="container">
+        
+    </div>
 </body>
+<script>
+    const cards = [{name: "Prod1", description: "desc1", price: "200"}, {name: "Prod2", description: "desc2", price: "400"}, {name: "Prod3", description: "desc3", price: "600"}]
+    const cardsMark = cards.map((product) => `<div class="product-cards">
+        <div class="product-cards__head">${product.name}</div>
+        <div class="product-cards__desc">${product.description}</div>
+        <div class="product-cards__price">${product.pricw}</div>
+        </div>`)
+
+        const container = document.querySelector(".container")
+        container.innerHTML = cardsMark
+</script>
 </html>

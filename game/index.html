@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game">
+        <button id="start">Начать</button>
+        <button id="finish" class="hidden">Завершить</button>
+        <div class="game-screen">
+            <div id="board">
+                <div id="timer">00</div>
+               <div class="math-exp">
+                    <div id="first-num">0</div>
+                    <div id="effect">+</div>
+                    <div id="second-num">0</div>
+                    <div id="equality"> = </div>
+                    <input id = "ans-num" type="number">
+               </div>
+            </div>
+        </div>
+        <button type="submit" id="ans-but">Отправить</button>
+        <div id="count-true-ans">0</div>
+    </div>
+    <script src="script.js" type="module">
+    </script>
+</body>
+</html>
